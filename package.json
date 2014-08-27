@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/binocarlos/cadvisor/issues"
   },
-  "homepage": "https://github.com/binocarlos/cadvisor"
+  "homepage": "https://github.com/binocarlos/cadvisor",
+  "devDependencies": {
+    "tape": "^2.14.0"
+  },
+  "dependencies": {
+    "concat-stream": "^1.4.6",
+    "hyperquest": "^0.3.0"
+  }
 }

@@ -9,8 +9,8 @@ tape('load machine data', function(t){
 			t.end()
 			return
 		}
-		console.log('-------------------------------------------');
-		console.dir(info)
+		t.equal(typeof(info.num_cores), 'number', 'num cores')
+		t.equal(typeof(info.memory_capacity), 'number', 'memory_capacity')
 		t.end()
 	})
 })

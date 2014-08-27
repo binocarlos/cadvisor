@@ -1,6 +1,7 @@
 var EventEmitter = require('events').EventEmitter
 var util = require('util')
 var hyperquest = require('hyperquest')
+var concat = require('concat-stream')
 
 function Cadvisor(endpoint){
 	EventEmitter.call(this)
