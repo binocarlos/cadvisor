@@ -20,8 +20,13 @@ backend.machine(function(err, data){
 
 })
 
-// get aggregate container information
+// get top level
 backend.container('/', function(err, data){
+
+})
+
+// get docker containers
+backend.container('/docker', function(err, data){
 
 })
 
