@@ -1,0 +1,22 @@
+{
+  "name": "cadvisor",
+  "version": "0.0.1",
+  "description": "a basic cadvisor HTTP API client",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binocarlos/cadvisor.git"
+  },
+  "keywords": [
+    "cadvsior"
+  ],
+  "author": "Kai Davenport",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binocarlos/cadvisor/issues"
+  },
+  "homepage": "https://github.com/binocarlos/cadvisor"
+}
