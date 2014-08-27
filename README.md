@@ -38,7 +38,7 @@ backend.container('/docker/mycontainer', function(err, data){
 
 ## api
 
-### `var backend = cadvisor(endpoint)`
+#### `var backend = cadvisor(endpoint)`
 
 Create a new cadvisor backend by passing the 'host:port' endpoint string:
 
@@ -46,11 +46,11 @@ Create a new cadvisor backend by passing the 'host:port' endpoint string:
 var backend = cadvisor('127.0.0.1:8080')
 ```
 
-### `backend.machine(function(err, info){})`
+#### `backend.machine(function(err, info){})`
 
 Load machine wide information
 
-### `backend.container(path, function(err, info){})`
+#### `backend.container(path, function(err, info){})`
 
 Load a specific containers information.
 
