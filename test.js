@@ -14,3 +14,17 @@ tape('load machine data', function(t){
 		t.end()
 	})
 })
+
+tape('container data', function(t){
+	backend.container('/docker', function(err, info){
+		if(err){
+			t.fail(err, 'load info')
+			t.end()
+			return
+		}
+		t.equal(info.name, '/docker', 'info name')
+		t.equal(info.stats.length, 60, '60 stats')
+		
+		t.end()
+	})
+})

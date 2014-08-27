@@ -19,7 +19,12 @@ Cadvisor.prototype.request = function(path, done){
 		res.pipe(concat(function(body){
 			body = body.toString()
 			if(res.statusCode==200){
-				done(null, JSON.parse(body))
+				if(body.charAt(0)=='{'){
+					done(null, JSON.parse(body))	
+				}
+				else{
+					done(body)
+				}
 			}
 			else{
 				done(res.statusCode + ': ' + body)
@@ -34,6 +39,17 @@ Cadvisor.prototype.path = function(path){
 
 Cadvisor.prototype.machine = function(done){
 	this.request('/machine', done)
+}
+
+Cadvisor.prototype.container = function(path, done){
+	if(arguments.length<=1){
+		done = path
+		path = '/'
+	}
+	if(path.charAt(0)!='/'){
+		path = '/' + path
+	}
+	this.request('/containers' + path, done)
 }
 
 module.exports = function(endpoint){

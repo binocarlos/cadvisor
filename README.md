@@ -49,7 +49,7 @@ Load machine wide information
 
 Load a specific containers information.
 
-Containers loaded with docker need to have the '/docker' path prefix.
+Note that the root container (/) contains usage for the entire machine. All Docker containers are listed under /docker.
 
 
 ## licence
